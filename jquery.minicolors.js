@@ -829,7 +829,7 @@
     // Parses a string and returns a valid hex string when possible
     function parseHex(string, expand) {
         string = string.replace(/^#/g, '');
-        string = string.replace(/[^A-F0-9]/g, '');
+        string = string.replace(/[^A-F0-9]/gi, '');
 
         if (string.length > 6) {
             string = string.slice(0, 6);
