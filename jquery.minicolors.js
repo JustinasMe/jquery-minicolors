@@ -835,7 +835,11 @@
             string = string.slice(0, 6);
         }
 
-        return '#' + string;
+        if (string.length > 0) {
+            return '#' + string;
+        }
+
+        return '';
     }
 
     // Parses a string and returns a valid RGB(A) string when possible
